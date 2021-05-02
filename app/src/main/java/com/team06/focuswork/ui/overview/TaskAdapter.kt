@@ -68,6 +68,8 @@ class TaskAdapter(private val context: Context, private val overviewFragment: Ov
             ).show()
             overviewFragment.onClickTaskItem(item)
         }
+
+        holder.taskItem.setTag("Task:$position") // for testing
     }
 
     override fun getItemCount() = list.size
